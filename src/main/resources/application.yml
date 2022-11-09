@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/department_db
+    username: ${dbUsername}
+    password: ${dbPassword}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
+
+service:
+  cash:
+    url: localhost:8082/cash/payment
+
+client:
+  host: http://localhost:3000
